@@ -1,5 +1,5 @@
-import { db } from "@cashory-demo/db";
-import { wallet } from "@cashory-demo/db/schema/wallet";
+import { db } from "@ledgerly/db";
+import { wallet } from "@ledgerly/db/schema/wallet";
 import { eq, and } from "drizzle-orm";
 
 export async function listWallets(userId: string) {
@@ -30,7 +30,7 @@ export async function createWallet(
     icon?: string;
     currency?: string;
     isDefault?: boolean;
-  }
+  },
 ) {
   if (data.isDefault) {
     await db
@@ -63,7 +63,7 @@ export async function updateWallet(
     icon?: string;
     currency?: string;
     isDefault?: boolean;
-  }
+  },
 ) {
   if (data.isDefault) {
     await db

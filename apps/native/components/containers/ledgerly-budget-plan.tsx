@@ -5,7 +5,7 @@ import { GeneralWallet } from "../ui/icons/GeneralWallet";
 import { GeneralChevronDo } from "../ui/icons/GeneralChevronDo";
 import useAuthTheme from "@/hooks/use-auth-theme";
 
-interface CashoryBudgetPlanCardProps {
+interface LedgerlyBudgetPlanCardProps {
   month: string;
   availableCash: string | number;
   months?: string[]; // Optional array of months for the dropdown
@@ -13,7 +13,7 @@ interface CashoryBudgetPlanCardProps {
   className?: string; // Container additional styling
 }
 
-export default function CashoryBudgetPlanCard({
+export default function LedgerlyBudgetPlanCard({
   month,
   availableCash,
   months = [
@@ -32,7 +32,7 @@ export default function CashoryBudgetPlanCard({
   ],
   onMonthChange,
   className,
-}: CashoryBudgetPlanCardProps) {
+}: LedgerlyBudgetPlanCardProps) {
   const { isDark } = useAuthTheme();
   return (
     <Card

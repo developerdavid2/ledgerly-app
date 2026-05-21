@@ -4,8 +4,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, Dialog, Spinner, useThemeColor } from "heroui-native";
 import { useCategories, useDeleteCategory } from "@/hooks/use-categories";
-import { CashoryButton } from "../ui/cashory-button";
-import CashoryScreenHeader from "../base/cashory-screen-header";
+import { LedgerlyButton } from "../ui/ledgerly-button";
+import LedgerlyScreenHeader from "../base/ledgerly-screen-header";
 import { Container } from "../container";
 import CategoryItem from "../containers/category/category-item";
 import AddCategoryDialog from "../containers/category/add-category-dialog";
@@ -39,7 +39,7 @@ export default function CategoryTemplate() {
   return (
     <View className="flex-1" style={{ paddingBottom: insets.bottom }}>
       <View className="px-5 w-full">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Categories"
           showBack={true}
           rightElement={
@@ -110,7 +110,7 @@ export default function CategoryTemplate() {
               >
                 Cancel
               </Button>
-              <CashoryButton
+              <LedgerlyButton
                 variant="solid"
                 color="danger"
                 size="sm"
@@ -118,7 +118,7 @@ export default function CategoryTemplate() {
                 isLoading={deleteCategory.isPending}
               >
                 Delete
-              </CashoryButton>
+              </LedgerlyButton>
             </View>
           </Dialog.Content>
         </Dialog.Portal>

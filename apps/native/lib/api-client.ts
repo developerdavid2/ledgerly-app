@@ -1,4 +1,4 @@
-import { env } from "@cashory-demo/env/native";
+import { env } from "@ledgerly/env/native";
 import { hc } from "hono/client";
 import type { AppType } from "server";
 import { authClient } from "./auth-client";
@@ -17,7 +17,7 @@ async function getSessionCookie(): Promise<string | null> {
 
 async function authFetch(
   input: RequestInfo | URL,
-  init?: RequestInit
+  init?: RequestInit,
 ): Promise<Response> {
   const cookie = await getSessionCookie();
   const headers = new Headers(init?.headers);
@@ -37,7 +37,11 @@ export const apiClient = hc<AppType>(BASE_URL, { fetch: authFetch });
 
 // ── Legacy API client (keep for backward compatibility) ─────────
 export class ApiError extends Error {
-  constructor(message: string, public status: number, public code?: string) {
+  constructor(
+    message: string,
+    public status: number,
+    public code?: string,
+  ) {
     super(message);
     this.name = "ApiError";
   }
@@ -45,7 +49,7 @@ export class ApiError extends Error {
 
 export async function apiFetch<T>(
   path: string,
-  options: RequestInit = {}
+  options: RequestInit = {},
 ): Promise<T> {
   try {
     const cookie = await getSessionCookie();

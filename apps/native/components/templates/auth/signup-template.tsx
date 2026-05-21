@@ -29,7 +29,7 @@ import AuthPrimaryButton from "@/components/base/auth-primary-button";
 import AuthSeparator from "@/components/base/auth-separator";
 import AuthSocialButtons from "@/components/base/auth-social-button";
 import { AuthFooterLink } from "@/components/base/auth-footer-link";
-import { signUpSchema } from "@cashory-demo/schema";
+import { signUpSchema } from "@ledgerly/schema";
 import { authClient } from "@/lib/auth-client";
 import { onlineManager } from "@tanstack/react-query";
 
@@ -115,8 +115,8 @@ export default function SignUpTemplate() {
       setAuthError(
         getAuthErrorMessage(
           error,
-          "Failed to create account. Please try again."
-        )
+          "Failed to create account. Please try again.",
+        ),
       );
     }
   };
@@ -173,7 +173,7 @@ export default function SignUpTemplate() {
                 color: colors.textSecondary,
               }}
             >
-              Create your Cashory account to start tracking income, expenses,
+              Create your Ledgerly account to start tracking income, expenses,
               and everything in between
             </Text>
           </View>

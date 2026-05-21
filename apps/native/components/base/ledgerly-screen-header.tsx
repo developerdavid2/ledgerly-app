@@ -5,7 +5,7 @@ import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import useAuthTheme from "@/hooks/use-auth-theme";
 
-interface CashoryScreenHeaderProps {
+interface LedgerlyScreenHeaderProps {
   title: string;
   rightElement?: React.ReactNode;
   showBack?: boolean;
@@ -13,19 +13,19 @@ interface CashoryScreenHeaderProps {
   className?: string;
 }
 
-export default function CashoryScreenHeader({
+export default function LedgerlyScreenHeader({
   title,
   rightElement,
   showBack = true,
   onBack,
   className,
-}: CashoryScreenHeaderProps) {
+}: LedgerlyScreenHeaderProps) {
   const { isDark } = useAuthTheme();
   return (
     <View
       className={cn(
         "flex-row items-center justify-between w-full pt-1",
-        className
+        className,
       )}
     >
       <View className="flex-row items-center gap-x-2.5">

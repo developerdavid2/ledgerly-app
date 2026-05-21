@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 import { useThemeColors } from "@/hooks/use-theme-colors";
 
-export interface CashoryDateTimePickerProps {
+export interface LedgerlyDateTimePickerProps {
   visible: boolean;
   value: Date;
   onDateChange: (date: Date) => void;
@@ -18,7 +18,7 @@ type DateTimePickerOnValueChange = NonNullable<
   React.ComponentProps<typeof DateTimePicker>["onValueChange"]
 >;
 
-export const CashoryDateTimePicker: React.FC<CashoryDateTimePickerProps> = ({
+export const LedgerlyDateTimePicker: React.FC<LedgerlyDateTimePickerProps> = ({
   visible,
   value,
   onDateChange,

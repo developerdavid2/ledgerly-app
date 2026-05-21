@@ -9,7 +9,7 @@ import {
   createNotificationSchema,
   listNotificationsSchema,
   updateNotificationReadSchema,
-} from "@cashory-demo/schema/notification.schema";
+} from "@ledgerly/schema/notification.schema";
 import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
 

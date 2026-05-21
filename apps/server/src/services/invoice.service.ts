@@ -1,5 +1,5 @@
-import { db } from "@cashory-demo/db";
-import { invoice, invoiceItem } from "@cashory-demo/db/schema/invoice";
+import { db } from "@ledgerly/db";
+import { invoice, invoiceItem } from "@ledgerly/db/schema/invoice";
 import { eq, and, desc, count } from "drizzle-orm";
 import { createNotification } from "./notification.service";
 

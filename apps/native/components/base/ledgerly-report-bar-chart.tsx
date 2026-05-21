@@ -4,19 +4,19 @@ import { BarChartDataPoint } from "@/types/reports";
 import useAuthTheme from "@/hooks/use-auth-theme";
 import { cn } from "heroui-native";
 
-interface CashoryReportBarChartProps {
+interface LedgerlyReportBarChartProps {
   data: BarChartDataPoint[];
   maxBarHeight?: number;
   variant?: "income" | "expense" | "overview";
   className?: string;
 }
 
-export default function CashoryReportBarChart({
+export default function LedgerlyReportBarChart({
   data,
   maxBarHeight = 160,
   variant = "overview",
   className = "",
-}: CashoryReportBarChartProps) {
+}: LedgerlyReportBarChartProps) {
   const { isDark } = useAuthTheme();
 
   const maxValue = Math.max(...data.map((d: BarChartDataPoint) => d.value), 1);
@@ -28,8 +28,8 @@ export default function CashoryReportBarChart({
           ? "#FFFFFF"
           : "#1C3E38"
         : isDark
-        ? "#3A6B5E"
-        : "#D4E8E3";
+          ? "#3A6B5E"
+          : "#D4E8E3";
     }
     if (variant === "expense") {
       return isHighest
@@ -37,8 +37,8 @@ export default function CashoryReportBarChart({
           ? "#FFFFFF"
           : "#1C3E38"
         : isDark
-        ? "#3A6B5E"
-        : "#D4E8E3";
+          ? "#3A6B5E"
+          : "#D4E8E3";
     }
     // overview
     return isHighest
@@ -46,8 +46,8 @@ export default function CashoryReportBarChart({
         ? "#FFFFFF"
         : "#1C3E38"
       : isDark
-      ? "#3A6B5E"
-      : "#D4E8E3";
+        ? "#3A6B5E"
+        : "#D4E8E3";
   };
 
   const formatValue = (value: number) => {

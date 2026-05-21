@@ -1,6 +1,6 @@
 import { apiClient, ApiError } from "@/lib/api-client";
 import { queryKeys } from "@/lib/query-keys";
-import { Category } from "@cashory-demo/schema/category.schema";
+import { Category } from "@ledgerly/schema/category.schema";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 export function useCategories(type?: "income" | "expense") {

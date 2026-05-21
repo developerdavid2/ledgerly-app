@@ -14,7 +14,7 @@ import {
   createInvoiceSchema,
   listInvoicesSchema,
   updateInvoiceStatusSchema,
-} from "@cashory-demo/schema/invoice.schema";
+} from "@ledgerly/schema/invoice.schema";
 
 export const invoiceRoutes = new Hono()
   .use(authMiddleware)

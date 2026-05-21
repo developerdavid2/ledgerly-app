@@ -11,7 +11,7 @@ export default function Index() {
   const router = useRouter();
   const { data: session, isPending } = useAuthSession();
   const [splashDone, setSplashDone] = useState(false);
-  const hasRedirected = useRef(false); // ← add this
+  const hasRedirected = useRef(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => setSplashDone(true), SPLASH_DURATION_MS);

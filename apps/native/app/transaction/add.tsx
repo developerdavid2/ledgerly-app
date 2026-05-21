@@ -6,16 +6,16 @@ import { useCategories } from "@/hooks/use-categories";
 import { useWallets } from "@/hooks/use-wallet";
 import { useCreateTransaction } from "@/hooks/use-transactions";
 import { SelectOption, TransactionStep } from "@/types/transactions";
-import CashoryScreenHeader from "@/components/base/cashory-screen-header";
+import LedgerlyScreenHeader from "@/components/base/ledgerly-screen-header";
 import StepProgressBar from "@/components/base/step-progress-bar";
 import { ScrollView } from "react-native";
 import TransactionTypeStep from "@/components/containers/transactions/transaction-type-step";
 import TransactionFormStep from "@/components/containers/transactions/transaction-form-step";
 import ActionButton from "@/components/ui/action-button";
-import { createTransactionSchema } from "@cashory-demo/schema/transaction.schema";
-import { CashoryDateTimePicker } from "@/components/containers/cashory-date-time-picker";
+import { createTransactionSchema } from "@ledgerly/schema/transaction.schema";
+import { LedgerlyDateTimePicker } from "@/components/containers/ledgerly-date-time-picker";
 import { formatDateTime } from "@/lib/format";
-import CashoryConfirmationModal from "@/components/base/cashory-confirmation-modal";
+import LedgerlyConfirmationModal from "@/components/base/ledgerly-confirmation-modal";
 import TransactionSummaryStep from "@/components/containers/transactions/transaction-summary-step";
 
 export default function AddTransaction() {
@@ -139,7 +139,7 @@ export default function AddTransaction() {
       style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}
     >
       <View className="px-2.5  w-full">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Add Transaction"
           showBack={true}
           onBack={handleBack}
@@ -197,7 +197,7 @@ export default function AddTransaction() {
       </View>
 
       {/* Date & Time Picker */}
-      <CashoryDateTimePicker
+      <LedgerlyDateTimePicker
         visible={showDatePicker}
         value={selectedDate}
         onDateChange={setSelectedDate}
@@ -208,7 +208,7 @@ export default function AddTransaction() {
         onCancel={() => setShowDatePicker(false)}
       />
 
-      <CashoryConfirmationModal
+      <LedgerlyConfirmationModal
         visible={showConfirmModal}
         onCancel={() => setShowConfirmModal(false)}
         onConfirm={handleConfirmSave}

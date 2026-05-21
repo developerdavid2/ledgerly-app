@@ -7,13 +7,13 @@ import { useCreateInvoice } from "@/hooks/use-invoice";
 
 import { InvoiceItemForm } from "@/types/invoice";
 import { formatDateTime } from "@/lib/format";
-import CashoryScreenHeader from "@/components/base/cashory-screen-header";
+import LedgerlyScreenHeader from "@/components/base/ledgerly-screen-header";
 import ActionButton from "@/components/ui/action-button";
-import CashoryInput from "@/components/ui/cashory-input";
+import LedgerlyInput from "@/components/ui/ledgerly-input";
 import { FormDateField } from "@/components/ui/form-date-field";
 import { FormNoteInput } from "@/components/ui/form-note-input";
-import { CashoryDateTimePicker } from "@/components/containers/cashory-date-time-picker";
-import { createInvoiceSchema } from "@cashory-demo/schema/invoice.schema";
+import { LedgerlyDateTimePicker } from "@/components/containers/ledgerly-date-time-picker";
+import { createInvoiceSchema } from "@ledgerly/schema/invoice.schema";
 
 export default function AddInvoiceScreen() {
   const router = useRouter();
@@ -139,7 +139,7 @@ export default function AddInvoiceScreen() {
     >
       {/* Header */}
       <View className="px-4 mt-2.5 w-full">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Create Invoice"
           showBack={true}
           onBack={() => router.back()}
@@ -152,21 +152,21 @@ export default function AddInvoiceScreen() {
         contentContainerStyle={{ paddingBottom: 100 }}
       >
         <View className="flex-col gap-y-4">
-          <CashoryInput
+          <LedgerlyInput
             label="Invoice Number *"
             value={invoiceNumber}
             onChangeText={setInvoiceNumber}
             placeholder="INV-XXXXXX"
           />
 
-          <CashoryInput
+          <LedgerlyInput
             label="Client Name *"
             value={clientName}
             onChangeText={setClientName}
             placeholder="Name or company"
           />
 
-          <CashoryInput
+          <LedgerlyInput
             label="Client Email"
             value={clientEmail}
             onChangeText={setClientEmail}
@@ -216,7 +216,7 @@ export default function AddInvoiceScreen() {
                 </View>
 
                 <View className="flex-col gap-y-3">
-                  <CashoryInput
+                  <LedgerlyInput
                     label="Description"
                     value={item.description}
                     onChangeText={(val) =>
@@ -227,7 +227,7 @@ export default function AddInvoiceScreen() {
 
                   <View className="flex-row gap-x-3">
                     <View className="flex-1">
-                      <CashoryInput
+                      <LedgerlyInput
                         label="Quantity"
                         value={item.quantity}
                         onChangeText={(val) =>
@@ -238,7 +238,7 @@ export default function AddInvoiceScreen() {
                       />
                     </View>
                     <View className="flex-1">
-                      <CashoryInput
+                      <LedgerlyInput
                         label="Unit Price"
                         value={item.unitPrice}
                         onChangeText={(val) =>
@@ -263,7 +263,7 @@ export default function AddInvoiceScreen() {
 
           <View className="flex-row gap-x-4 mt-2">
             <View className="flex-1">
-              <CashoryInput
+              <LedgerlyInput
                 label="Tax Rate (%)"
                 value={taxRate}
                 onChangeText={setTaxRate}
@@ -301,7 +301,7 @@ export default function AddInvoiceScreen() {
       </View>
 
       {/* Date & Time Pickers */}
-      <CashoryDateTimePicker
+      <LedgerlyDateTimePicker
         visible={showIssueDatePicker}
         value={issueDate}
         onDateChange={setIssueDate}
@@ -309,7 +309,7 @@ export default function AddInvoiceScreen() {
         onCancel={() => setShowIssueDatePicker(false)}
       />
 
-      <CashoryDateTimePicker
+      <LedgerlyDateTimePicker
         visible={showDueDatePicker}
         value={dueDate}
         onDateChange={setDueDate}

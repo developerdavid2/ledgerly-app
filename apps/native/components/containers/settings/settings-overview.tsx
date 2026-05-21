@@ -3,9 +3,9 @@ import React from "react";
 import { SettingsView } from "@/types/settings";
 import { useRouter } from "expo-router";
 import { useAuthSession, useSignOut } from "@/hooks/use-auth-session";
-import CashoryProfileCard from "@/components/containers/settings/cashory-profile-card";
+import LedgerlyProfileCard from "@/components/containers/settings/ledgerly-profile-card";
 import SectionLabel from "@/components/base/settings/section-label";
-import CashorySettingsMenuItem from "@/components/base/settings/cashory-settings-menu-item";
+import LedgerlySettingsMenuItem from "@/components/base/settings/ledgerly-settings-menu-item";
 import { User } from "@/components/ui/icons/User";
 import { GeneralNotificat } from "@/components/ui/icons/GeneralNotificat";
 import { GeneralSliders } from "@/components/ui/icons/GeneralSliders";
@@ -17,7 +17,7 @@ import { GeneralSummary } from "@/components/ui/icons/GeneralSummary";
 import { GeneralHelp } from "@/components/ui/icons/GeneralHelp";
 import { GeneralFaq } from "@/components/ui/icons/GeneralFaq";
 import { GeneralSecurity } from "@/components/ui/icons/GeneralSecurity";
-import { CashoryButton } from "@/components/ui/cashory-button";
+import { LedgerlyButton } from "@/components/ui/ledgerly-button";
 import { GeneralLogout } from "@/components/ui/icons/GeneralLogout";
 
 export default function SettingsOverview({
@@ -34,7 +34,7 @@ export default function SettingsOverview({
   return (
     <View className="flex-col gap-y-5">
       {/* Profile Card */}
-      <CashoryProfileCard
+      <LedgerlyProfileCard
         name={user?.name || "User"}
         email={user?.email || "No email"}
         avatarUrl={user?.image || "User Image"}
@@ -44,21 +44,21 @@ export default function SettingsOverview({
       {/* General Section */}
       <View className="flex-col gap-y-2.5">
         <SectionLabel label="General" />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Account"
           icon={<User color={iconColor} width={18} height={18} />}
           onPress={() => onNavigate("account")}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Notification"
           icon={<GeneralNotificat color={iconColor} width={18} height={18} />}
           onPress={() => onNavigate("notification-settings")}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Preference"
           icon={<GeneralSliders color={iconColor} width={18} height={18} />}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Language"
           icon={<GeneralExplore color={iconColor} width={18} height={18} />}
         />
@@ -67,30 +67,30 @@ export default function SettingsOverview({
       {/* Main App Section */}
       <View className="flex-col gap-y-2.5">
         <SectionLabel label="Main App" />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Transaction"
           icon={<GeneralWallet color={iconColor} width={18} height={18} />}
           onPress={() => router.push("/transactions")}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Category"
           icon={<GeneralBook color={iconColor} width={18} height={18} />}
           onPress={() => router.push("/category")}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Wallet"
           icon={<GeneralWallet color={iconColor} width={18} height={18} />}
           onPress={() => router.push("/wallet")}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Insight"
           icon={<GeneralReport color={iconColor} width={18} height={18} />}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="My Overview"
           icon={<GeneralSummary color={iconColor} width={18} height={18} />}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Document"
           icon={<GeneralBook color={iconColor} width={18} height={18} />}
         />
@@ -99,15 +99,15 @@ export default function SettingsOverview({
       {/* Support Section */}
       <View className="flex-col gap-y-2.5">
         <SectionLabel label="Support" />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Help Center"
           icon={<GeneralHelp color={iconColor} width={18} height={18} />}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="FAQ"
           icon={<GeneralFaq color={iconColor} width={18} height={18} />}
         />
-        <CashorySettingsMenuItem
+        <LedgerlySettingsMenuItem
           label="Privacy Policy"
           icon={<GeneralSecurity color={iconColor} width={18} height={18} />}
         />
@@ -115,7 +115,7 @@ export default function SettingsOverview({
 
       {/* Action Section */}
       <View className="flex-col gap-y-2.5 mt-2">
-        <CashoryButton
+        <LedgerlyButton
           variant="solid"
           fullWidth
           isLoading={isPending}
@@ -137,7 +137,7 @@ export default function SettingsOverview({
               Sign Out
             </Text>
           </View>
-        </CashoryButton>
+        </LedgerlyButton>
       </View>
     </View>
   );

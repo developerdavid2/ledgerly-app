@@ -5,7 +5,7 @@ import { Card, cn } from "heroui-native";
 import { GeneralArrowUpRi } from "../ui/icons/GeneralArrowUpRi";
 import { GeneralWallet } from "../ui/icons/GeneralWallet";
 
-interface CashoryReportSummaryCardProps {
+interface LedgerlyReportSummaryCardProps {
   leftTitle: string;
   leftValue: string | number;
   rightTitle: string;
@@ -14,18 +14,18 @@ interface CashoryReportSummaryCardProps {
   className?: string;
 }
 
-export default function CashoryReportSummaryCard({
+export default function LedgerlyReportSummaryCard({
   leftTitle,
   leftValue,
   rightTitle,
   rightValue,
   type,
   className = "",
-}: CashoryReportSummaryCardProps) {
+}: LedgerlyReportSummaryCardProps) {
   const { isDark } = useAuthTheme();
   const iconColor = isDark ? "#FFFFFF" : "#1C3E38";
 
-  // Light mode shadow matching other Cashory components
+  // Light mode shadow matching other Ledgerly components
   const shadowStyle: StyleProp<ViewStyle> = !isDark
     ? {
         shadowColor: "rgba(139, 138, 138, 0.12)",
@@ -50,7 +50,7 @@ export default function CashoryReportSummaryCard({
     <View
       className={cn(
         "flex-row items-stretch justify-between w-full gap-x-2.5",
-        className
+        className,
       )}
     >
       <Card

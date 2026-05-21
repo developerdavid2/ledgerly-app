@@ -7,8 +7,8 @@ import {
 import { tv, type VariantProps } from "tailwind-variants";
 
 /**
- * Cashory Button Variants using tailwind-variants
- * Matches Figma designs and maintains consistency with CashoryInput:
+ * Ledgerly Button Variants using tailwind-variants
+ * Matches Figma designs and maintains consistency with LedgerlyInput:
  * - Rounded 15px with continuous border curve
  * - Height matching inputs (70px for large)
  * - Typography: Plus Jakarta Sans Bold
@@ -204,8 +204,9 @@ const textVariants = tv({
   },
 });
 
-export interface CashoryButtonProps
-  extends Omit<HeroButtonProps, "variant" | "color" | "size" | "children">,
+export interface LedgerlyButtonProps
+  extends
+    Omit<HeroButtonProps, "variant" | "color" | "size" | "children">,
     VariantProps<typeof buttonVariants> {
   children?: React.ReactNode | ((state: any) => React.ReactNode);
   textClassName?: string;
@@ -213,10 +214,10 @@ export interface CashoryButtonProps
 }
 
 /**
- * A reusable Button component following the Cashory Design System.
- * Consistent with CashoryInput and CashoryInputOTP.
+ * A reusable Button component following the Ledgerly Design System.
+ * Consistent with LedgerlyInput and LedgerlyInputOTP.
  */
-const ButtonInner = React.forwardRef<any, CashoryButtonProps>(
+const ButtonInner = React.forwardRef<any, LedgerlyButtonProps>(
   (
     {
       className,
@@ -232,7 +233,7 @@ const ButtonInner = React.forwardRef<any, CashoryButtonProps>(
       isLoading,
       ...props
     },
-    ref
+    ref,
   ) => {
     const buttonClass = buttonVariants({
       variant,
@@ -255,8 +256,8 @@ const ButtonInner = React.forwardRef<any, CashoryButtonProps>(
       color === "danger"
         ? "danger"
         : color === "success"
-        ? "success"
-        : "default";
+          ? "success"
+          : "default";
 
     return (
       // @ts-expect-error Types mismatched from heroui-native
@@ -311,18 +312,18 @@ const ButtonInner = React.forwardRef<any, CashoryButtonProps>(
         )}
       </HeroButton>
     );
-  }
+  },
 );
 
-export type CashoryButtonType = typeof ButtonInner & {
+export type LedgerlyButtonType = typeof ButtonInner & {
   Label: typeof HeroButton.Label;
 };
 
-export const CashoryButton = Object.assign(ButtonInner, {
+export const LedgerlyButton = Object.assign(ButtonInner, {
   Label: HeroButton.Label,
-}) as CashoryButtonType;
+}) as LedgerlyButtonType;
 
-CashoryButton.displayName = "CashoryButton";
+LedgerlyButton.displayName = "LedgerlyButton";
 
 // Also export as Button for backward compatibility
-export const Button = CashoryButton;
+export const Button = LedgerlyButton;

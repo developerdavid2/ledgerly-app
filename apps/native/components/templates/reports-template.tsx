@@ -10,7 +10,7 @@ import useAuthTheme from "@/hooks/use-auth-theme";
 import { Container } from "../container";
 import { Tabs } from "heroui-native";
 import { GeneralOption } from "../ui/icons/GeneralOption";
-import CashoryScreenHeader from "../base/cashory-screen-header";
+import LedgerlyScreenHeader from "../base/ledgerly-screen-header";
 import DashboardOverview from "../containers/reports/dashboard-overview";
 import IncomeActivity from "../containers/reports/income-activity";
 // import ExpenseActivity from "../containers/reports/expense-activity";
@@ -40,7 +40,7 @@ export default function ReportsTemplate() {
     <Container className="p-4" isScrollable={false}>
       {/* Header */}
       <View className="min-h-14 w-full">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           showBack={false}
           className="pt-0"
           title={TITLES[activeTab]}

@@ -13,7 +13,7 @@ import {
 } from "heroui-native";
 import { withUniwind } from "uniwind";
 import { GeneralEdit } from "../../ui/icons/GeneralEdit";
-import { CashoryButton } from "../../ui/cashory-button";
+import { LedgerlyButton } from "../../ui/ledgerly-button";
 import { useCreateCategory } from "@/hooks/use-categories";
 import { GeneralChevronDo2 } from "@/components/ui/icons/GeneralChevronDo2";
 
@@ -195,13 +195,13 @@ export default function AddCategoryDialog({
             className="gap-y-4 pb-6"
             style={{ paddingBottom: insets.bottom + 4 }}
           >
-            <CashoryButton
+            <LedgerlyButton
               onPress={handleCreate}
               isLoading={createCategory.isPending}
               className="bg-brand-green-500 dark:bg-dark-charcoal-green"
             >
               Save Category
-            </CashoryButton>
+            </LedgerlyButton>
           </View>
         </BottomSheet.Content>
       </BottomSheet.Portal>

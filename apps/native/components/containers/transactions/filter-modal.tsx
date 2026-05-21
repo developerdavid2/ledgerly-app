@@ -6,7 +6,7 @@ import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 import { GeneralFilter } from "@/components/ui/icons/GeneralFilter";
 import { GeneralSetting } from "@/components/ui/icons/GeneralSetting";
 
-interface CashoryFilterModalProps {
+interface LedgerlyFilterModalProps {
   visible: boolean;
   onClose: () => void;
   title?: string;
@@ -22,7 +22,7 @@ export default function FilterModal({
   onApplyUrl,
   onApply,
   children,
-}: CashoryFilterModalProps) {
+}: LedgerlyFilterModalProps) {
   const { iconColor, isDark } = useThemeColors();
   const insets = useSafeAreaInsets();
   return (

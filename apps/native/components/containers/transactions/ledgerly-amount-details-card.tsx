@@ -7,7 +7,7 @@ import { GeneralArrowUpRi } from "@/components/ui/icons/GeneralArrowUpRi";
 
 export type AmountDetailsStatus = "Success" | "Pending" | "Failed";
 
-export interface CashoryAmountDetailsCardProps {
+export interface LedgerlyAmountDetailsCardProps {
   label: string; // "Total Amount"
   amount: string | number;
   status: AmountDetailsStatus;
@@ -16,14 +16,14 @@ export interface CashoryAmountDetailsCardProps {
   className?: string;
 }
 
-export default function CashoryAmountDetailsCard({
+export default function LedgerlyAmountDetailsCard({
   label = "Total Amount",
   amount,
   status,
   icon,
   onPress,
   className = "",
-}: CashoryAmountDetailsCardProps) {
+}: LedgerlyAmountDetailsCardProps) {
   const { isDark } = useAuthTheme();
 
   const fallbackIconColor = isDark ? "#FFFFFF" : "#000000";

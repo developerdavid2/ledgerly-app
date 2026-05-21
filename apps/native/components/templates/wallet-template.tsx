@@ -2,9 +2,9 @@ import { View, Text, FlatList } from "react-native";
 import React, { useState } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, Dialog, Spinner, useThemeColor } from "heroui-native";
-import CashoryScreenHeader from "../base/cashory-screen-header";
-import { CashoryButton } from "../ui/cashory-button";
-import { Wallet } from "@cashory-demo/schema/wallet.schema";
+import LedgerlyScreenHeader from "../base/ledgerly-screen-header";
+import { LedgerlyButton } from "../ui/ledgerly-button";
+import { Wallet } from "@ledgerly/schema/wallet.schema";
 import { useDeleteWallet, useWallets } from "@/hooks/use-wallet";
 import { Ionicons } from "@expo/vector-icons";
 import { Container } from "../container";
@@ -39,7 +39,7 @@ export default function WalletTemplate() {
   return (
     <View className="flex-1" style={{ paddingBottom: insets.bottom }}>
       <View className="px-5 w-full">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Wallet"
           showBack={true}
           rightElement={
@@ -109,7 +109,7 @@ export default function WalletTemplate() {
               >
                 Cancel
               </Button>
-              <CashoryButton
+              <LedgerlyButton
                 variant="solid"
                 color="danger"
                 size="sm"
@@ -117,7 +117,7 @@ export default function WalletTemplate() {
                 isLoading={deleteWallet.isPending}
               >
                 Delete
-              </CashoryButton>
+              </LedgerlyButton>
             </View>
           </Dialog.Content>
         </Dialog.Portal>

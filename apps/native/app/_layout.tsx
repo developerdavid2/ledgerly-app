@@ -11,10 +11,13 @@ import {
 import { HeroUINativeProvider } from "heroui-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
-
+import * as SplashScreen from "expo-splash-screen";
 import { AppThemeProvider } from "@/contexts/app-theme-context";
 import { ReactQueryProvider } from "@/lib/react-query";
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
+
+SplashScreen.preventAutoHideAsync();
 
 export const unstable_settings = {
   initialRouteName: "index",
@@ -24,7 +27,7 @@ function StackLayout() {
   return (
     <Stack
       screenOptions={{
-        contentStyle: { backgroundColor: "black" }, // ✅ add this
+        contentStyle: { backgroundColor: "black" },
       }}
     >
       <Stack.Screen name="index" options={{ headerShown: false }} />
@@ -57,6 +60,12 @@ export default function Layout() {
     PlusJakartaSans_700Bold,
     PlusJakartaSans_700Bold_Italic,
   });
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
   if (!fontsLoaded) return null;
   return (

@@ -3,7 +3,7 @@ import React from "react";
 import useAuthTheme from "@/hooks/use-auth-theme";
 import { Card, cn } from "heroui-native";
 
-interface CashoryProfileCardProps {
+interface LedgerlyProfileCardProps {
   name: string;
   email: string;
   avatarUrl?: string;
@@ -11,13 +11,13 @@ interface CashoryProfileCardProps {
   className?: string;
 }
 
-export default function CashoryProfileCard({
+export default function LedgerlyProfileCard({
   name,
   email,
   avatarUrl,
   onPress,
   className = "",
-}: CashoryProfileCardProps) {
+}: LedgerlyProfileCardProps) {
   const { isDark } = useAuthTheme();
   const iconColor = isDark ? "#FFFFFF" : "#000000";
   const firstLetter = name?.charAt(0)?.toUpperCase() || "?";
@@ -27,7 +27,7 @@ export default function CashoryProfileCard({
       <Card
         className={cn(
           "rounded-[15px] bg-brand-green-500/80 dark:bg-brand-green-500 p-4 flex-row items-center justify-between border-0 w-full",
-          className
+          className,
         )}
         style={{ borderCurve: "continuous" }}
       >

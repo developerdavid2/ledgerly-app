@@ -5,19 +5,19 @@ import { Card, cn } from "heroui-native";
 import { User } from "@/components/ui/icons/User";
 import { GeneralChevronRi } from "@/components/ui/icons/GeneralChevronRi";
 
-export interface CashorySettingsMenuItemProps {
+export interface LedgerlySettingsMenuItemProps {
   label: string;
   icon?: React.ReactNode;
   onPress?: () => void;
   className?: string;
 }
 
-export default function CashorySettingsMenuItem({
+export default function LedgerlySettingsMenuItem({
   label,
   icon,
   onPress,
   className = "",
-}: CashorySettingsMenuItemProps) {
+}: LedgerlySettingsMenuItemProps) {
   const { isDark } = useAuthTheme();
   const arrowColor = isDark ? "#FFFFFF" : "#6B6B6C";
   const fallbackIconColor = isDark ? "#FFFFFF" : "#6B6B6C";
@@ -26,7 +26,7 @@ export default function CashorySettingsMenuItem({
       <Card
         className={cn(
           "rounded-[15px] bg-white/60 dark:bg-accent-card/15 py-4.5 px-5 flex-row items-center justify-between border-0 w-full",
-          className
+          className,
         )}
         style={{ borderCurve: "continuous" }}
       >

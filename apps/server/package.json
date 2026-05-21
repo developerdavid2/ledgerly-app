@@ -10,10 +10,10 @@
     "start": "node dist/index.mjs"
   },
   "dependencies": {
-    "@cashory-demo/auth": "*",
-    "@cashory-demo/db": "*",
-    "@cashory-demo/schema": "*",
-    "@cashory-demo/env": "*",
+    "@ledgerly/auth": "*",
+    "@ledgerly/db": "*",
+    "@ledgerly/schema": "*",
+    "@ledgerly/env": "*",
     "@hono/node-server": "^1.14.4",
     "@hono/zod-validator": "^0.7.6",
     "better-auth": "1.5.5",
@@ -22,7 +22,7 @@
     "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@cashory-demo/config": "*",
+    "@ledgerly/config": "*",
     "@types/node": "^22.13.14",
     "tsdown": "^0.16.5",
     "tsx": "^4.19.2",

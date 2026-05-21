@@ -1,7 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
 import { queryKeys } from "@/lib/query-keys";
-import { CreateInvoiceInput } from "@cashory-demo/schema/invoice.schema";
+import { CreateInvoiceInput } from "@ledgerly/schema/invoice.schema";
 
 interface InvoiceListParams {
   [key: string]: unknown;

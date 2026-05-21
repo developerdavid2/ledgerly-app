@@ -1,6 +1,6 @@
 import type { Session } from "better-auth/types";
 
-export interface CashoryUser {
+export interface LedgerlyUser {
   id: string;
   email: string;
   emailVerified: boolean;
@@ -13,6 +13,6 @@ export interface CashoryUser {
   phone?: string | null;
 }
 
-export interface CashorySession extends Session {
-  user: CashoryUser;
+export interface LedgerlySession extends Session {
+  user: LedgerlyUser;
 }

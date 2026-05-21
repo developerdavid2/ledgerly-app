@@ -14,7 +14,7 @@ import {
 } from "@/hooks/use-invoice";
 import { apiClient } from "@/lib/api-client";
 import { InvoiceStatus } from "@/types/invoice";
-import CashoryScreenHeader from "@/components/base/cashory-screen-header";
+import LedgerlyScreenHeader from "@/components/base/ledgerly-screen-header";
 import ActionButton from "@/components/ui/action-button";
 import { Container } from "@/components/container";
 
@@ -169,7 +169,7 @@ export default function InvoiceDetailTemplate({
     >
       {/* Header */}
       <View className="px-5 w-full">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Invoice Details"
           showBack={true}
           onBack={() => router.back()}

@@ -7,7 +7,7 @@ import { GeneralChevronDo } from "../ui/icons/GeneralChevronDo";
 import { Ionicons } from "@expo/vector-icons";
 import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 
-interface CashoryInvoiceListingCardProps {
+interface LedgerlyInvoiceListingCardProps {
   invoices: DashboardInvoiceItem[];
   onLoadMore?: () => void;
   onPressItem?: (item: DashboardInvoiceItem) => void;
@@ -17,7 +17,7 @@ interface CashoryInvoiceListingCardProps {
   initialRenderCount?: number;
 }
 
-export default function CashoryInvoiceListingCard({
+export default function LedgerlyInvoiceListingCard({
   invoices,
   onLoadMore,
   onPressItem,
@@ -25,7 +25,7 @@ export default function CashoryInvoiceListingCard({
   className,
   loadMoreText,
   initialRenderCount,
-}: CashoryInvoiceListingCardProps) {
+}: LedgerlyInvoiceListingCardProps) {
   const iconColor = useThemeColor("default-foreground");
   const dangerColor = useThemeColor("danger");
   const [visibleCount, setVisibleCount] = useState(initialRenderCount);

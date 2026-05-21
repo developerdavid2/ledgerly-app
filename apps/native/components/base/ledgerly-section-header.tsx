@@ -3,7 +3,7 @@ import React from "react";
 import { cn } from "heroui-native";
 import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 
-interface CashorySectionHeaderProps {
+interface LedgerlySectionHeaderProps {
   title: string;
   rightTitle?: string;
   rightTitleClassName?: string;
@@ -11,13 +11,13 @@ interface CashorySectionHeaderProps {
   className?: string;
 }
 
-export default function CashorySectionHeader({
+export default function LedgerlySectionHeader({
   title,
   rightTitle,
   rightTitleClassName = "text-brand-white",
   onRightPress,
   className = "mb-4 mt-6",
-}: CashorySectionHeaderProps) {
+}: LedgerlySectionHeaderProps) {
   return (
     <View className={cn("flex-row items-end justify-between px-1", className)}>
       <Text

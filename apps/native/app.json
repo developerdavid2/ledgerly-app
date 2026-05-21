@@ -1,13 +1,32 @@
 {
   "expo": {
-    "scheme": "cashory-demo",
+    "name": "Ledgerly",
+    "slug": "ledgerly",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "ledgerly",
     "userInterfaceStyle": "automatic",
-    "orientation": "default",
-    "web": {
-      "bundler": "metro"
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.developerdavid2.ledgerly"
     },
-    "name": "Cashory Demo",
-    "slug": "Cashory-Demo",
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#203f3a",
+        "foregroundImage": "./assets/images/adaptive-icon.png"
+      },
+      "softwareKeyboardLayoutMode": "pan",
+      "predictiveBackGestureEnabled": false,
+      "package": "com.developerdavid2.ledgerly",
+      "versionCode": 1
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
     "plugins": [
       "expo-font",
       "expo-image",
@@ -16,14 +35,28 @@
       "expo-secure-store",
       "@react-native-community/datetimepicker",
       "expo-sharing",
-      "react-native-navigation-mode"
+      "react-native-navigation-mode",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#203f3a",
+          "imageWidth": 180,
+          "android": {
+            "backgroundColor": "#203f3a"
+          },
+          "dark": {
+            "image": "./assets/images/splash-icon.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#203f3a"
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    },
-    "android": {
-      "package": "com.developerdavid2.CashoryDemo"
     }
   }
 }

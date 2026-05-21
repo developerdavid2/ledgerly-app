@@ -14,11 +14,11 @@ import { TransactionFilters, TransactionType } from "@/types/transactions";
 import { useTransactions } from "@/hooks/use-transactions";
 import { format } from "date-fns";
 import { useThemeColors } from "@/hooks/use-theme-colors";
-import CashoryScreenHeader from "../base/cashory-screen-header";
+import LedgerlyScreenHeader from "../base/ledgerly-screen-header";
 import { GeneralSearch } from "../ui/icons/GeneralSearch";
 import { GeneralOption } from "../ui/icons/GeneralOption";
-import CashoryTransactionCard from "../base/cashory-transaction-card";
-import CashorySearchbar from "../base/cashory-searchbar";
+import LedgerlyTransactionCard from "../base/ledgerly-transaction-card";
+import LedgerlySearchbar from "../base/ledgerly-searchbar";
 import TransactionFilterModal from "../containers/transactions/transaction-filter-modal";
 
 type ListTransactionsResponse = InferResponseType<
@@ -88,7 +88,7 @@ export default function TransactionTemplate() {
     <View className="flex-1 bg-brand-flashwhite dark:bg-brand-green-900">
       {/* Header */}
       <View className="px-2.5 pb-5">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Transaction"
           className="mb-0 pt-0"
           rightElement={
@@ -113,7 +113,7 @@ export default function TransactionTemplate() {
         }}
       >
         {/* Search Bar */}
-        <CashorySearchbar
+        <LedgerlySearchbar
           containerClassName="mx-6 mt-2.5 mb-[22px]"
           onFilterPress={() => setFilterModalVisible(true)}
         />
@@ -148,7 +148,7 @@ export default function TransactionTemplate() {
                 <View className="flex-col gap-y-2.5">
                   {group.data.map((transaction) => (
                     <View key={transaction.id} className="flex-col gap-y-2.5">
-                      <CashoryTransactionCard
+                      <LedgerlyTransactionCard
                         title={
                           transaction.categoryName || transaction.description
                         }

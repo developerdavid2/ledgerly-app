@@ -22,7 +22,7 @@ import {
   TextField,
   useToast,
 } from "heroui-native";
-import { signInSchema } from "@cashory-demo/schema";
+import { signInSchema } from "@ledgerly/schema";
 import z from "zod";
 import { useSignIn } from "@/hooks/use-auth-session";
 import AuthPrimaryButton from "@/components/base/auth-primary-button";
@@ -160,7 +160,8 @@ export default function SignInTemplate() {
                 color: colors.textSecondary,
               }}
             >
-              Sign in to your Cashory account to continue tracking your finances
+              Sign in to your Ledgerly account to continue tracking your
+              finances
             </Text>
           </View>
         </View>

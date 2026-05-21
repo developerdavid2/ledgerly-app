@@ -1,5 +1,5 @@
 {
-  "name": "@cashory-demo/schema",
+  "name": "@ledgerly/schema",
   "type": "module",
   "exports": {
     ".": {
@@ -13,7 +13,7 @@
     "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@cashory-demo/config": "*",
+    "@ledgerly/config": "*",
     "typescript": "^5"
   }
 }

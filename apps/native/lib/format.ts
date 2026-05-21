@@ -1,5 +1,5 @@
 /**
- * Currency formatting utilities for the Cashory app.
+ * Currency formatting utilities for the Ledgerly app.
  * Replaces inline formatting logic duplicated across 7+ components.
  */
 

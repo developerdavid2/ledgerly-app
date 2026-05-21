@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import useAuthTheme from "@/hooks/use-auth-theme";
 
-interface CashoryNotificationCardProps {
+interface LedgerlyNotificationCardProps {
   title: string;
   description: string;
   time: string;
@@ -10,13 +10,13 @@ interface CashoryNotificationCardProps {
   isUnread?: boolean;
 }
 
-export default function CashoryNotificationCard({
+export default function LedgerlyNotificationCard({
   title,
   description,
   time,
   icon,
   isUnread = false,
-}: CashoryNotificationCardProps) {
+}: LedgerlyNotificationCardProps) {
   const { isDark } = useAuthTheme();
   return (
     <TouchableOpacity

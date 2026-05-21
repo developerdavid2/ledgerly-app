@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React, { useState } from "react";
-import CashoryNotificationItem from "@/components/base/settings/cashory-notification-item";
+import LedgerlyNotificationItem from "@/components/base/settings/ledgerly-notification-item";
 
 const NOTIFICATION_SETTINGS = [
   {
@@ -46,8 +46,8 @@ export default function NotificationSettingsView() {
     () =>
       NOTIFICATION_SETTINGS.reduce(
         (acc, item) => ({ ...acc, [item.id]: false }),
-        {} as Record<string, boolean>
-      )
+        {} as Record<string, boolean>,
+      ),
   );
 
   const handleToggle = (id: string) => (value: boolean) => {
@@ -57,7 +57,7 @@ export default function NotificationSettingsView() {
   return (
     <View className="flex-col gap-y-2.5">
       {NOTIFICATION_SETTINGS.map((item) => (
-        <CashoryNotificationItem
+        <LedgerlyNotificationItem
           key={item.id}
           title={item.title}
           description={item.description}

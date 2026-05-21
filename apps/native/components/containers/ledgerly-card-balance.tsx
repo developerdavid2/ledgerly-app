@@ -5,7 +5,7 @@ import { CardOrnament } from "../ui/icons/card-ornament";
 import useAuthTheme from "@/hooks/use-auth-theme";
 import { GeneralArrowUpRi } from "../ui/icons/GeneralArrowUpRi";
 
-interface CashoryCardBalanceProps {
+interface LedgerlyCardBalanceProps {
   totalBalance: number;
   earned: number;
   spent: number;
@@ -14,20 +14,20 @@ interface CashoryCardBalanceProps {
   className?: string;
 }
 
-export default function CashoryCardBalance({
+export default function LedgerlyCardBalance({
   totalBalance,
   earned,
   spent,
   available,
   savings,
   className = "",
-}: CashoryCardBalanceProps) {
+}: LedgerlyCardBalanceProps) {
   const { isDark } = useAuthTheme();
   return (
     <Card
       className={cn(
         "relative rounded-2xl bg-brand-green-500 w-full min-h-39.25 p-5 overflow-hidden border-0",
-        className
+        className,
       )}
       style={{ borderCurve: "continuous" }}
     >

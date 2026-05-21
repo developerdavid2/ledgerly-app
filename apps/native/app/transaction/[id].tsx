@@ -15,8 +15,8 @@ import { useTransaction } from "@/hooks/use-transactions";
 import { GeneralChevronRi } from "@/components/ui/icons/GeneralChevronRi";
 import { GeneralShare } from "@/components/ui/icons/GeneralShare";
 import { GeneralDownload } from "@/components/ui/icons/GeneralDownload";
-import CashoryAmountDetailsCard from "@/components/containers/transactions/cashory-amount-details-card";
-import { CashoryCardDetails } from "@/components/containers/transactions/cashory-card-details";
+import LedgerlyAmountDetailsCard from "@/components/containers/transactions/ledgerly-amount-details-card";
+import { LedgerlyCardDetails } from "@/components/containers/transactions/ledgerly-card-details";
 
 export default function TransactionDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -145,7 +145,7 @@ export default function TransactionDetailScreen() {
 
         {/* Amount Information Card */}
         <View className="w-full mb-2.5">
-          <CashoryAmountDetailsCard
+          <LedgerlyAmountDetailsCard
             label="Total Amount"
             amount={displayAmount}
             status={"Success"}
@@ -154,7 +154,7 @@ export default function TransactionDetailScreen() {
 
         {/* Transfer Flow Card (sender → receiver) */}
         <View className="w-full mb-2">
-          <CashoryCardDetails
+          <LedgerlyCardDetails
             status={"Success"}
             sender={sender}
             receiver={receiver}
