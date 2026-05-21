@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Button, Card, useThemeColor, Surface } from "heroui-native";
-import type { Wallet } from "@cashory-demo/schema/wallet.schema";
+import type { Wallet } from "@ledgerly/schema/wallet.schema";
 
 interface WalletCardProps {
   wallet: Wallet;

@@ -1,4 +1,4 @@
-import { CashoryUser } from "@/types/auth";
+import { LedgerlyUser } from "@/types/auth";
 
 export interface ApiError {
   message: string;
@@ -19,16 +19,16 @@ export interface UpdateProfileData {
 }
 
 export interface UpdateProfileResponse {
-  user: CashoryUser;
+  user: LedgerlyUser;
 }
 
 export interface OnboardingCompleteResponse {
   success: boolean;
-  user: CashoryUser;
+  user: LedgerlyUser;
 }
 
 export interface AuthResponse {
-  user: CashoryUser;
+  user: LedgerlyUser;
   token?: string;
 }
 

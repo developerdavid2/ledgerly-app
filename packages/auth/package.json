@@ -1,5 +1,5 @@
 {
-  "name": "@cashory-demo/auth",
+  "name": "@ledgerly/auth",
   "type": "module",
   "exports": {
     ".": {
@@ -12,14 +12,14 @@
   "scripts": {},
   "dependencies": {
     "@better-auth/expo": "1.5.5",
-    "@cashory-demo/db": "*",
-    "@cashory-demo/env": "*",
+    "@ledgerly/db": "*",
+    "@ledgerly/env": "*",
     "better-auth": "1.5.5",
     "dotenv": "^17.2.2",
     "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@cashory-demo/config": "*",
+    "@ledgerly/config": "*",
     "typescript": "^5"
   }
 }

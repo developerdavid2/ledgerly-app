@@ -4,9 +4,9 @@ import { BarChartDataPoint } from "@/types/reports";
 import useAuthTheme from "@/hooks/use-auth-theme";
 import { Card, cn } from "heroui-native";
 import { GeneralOption } from "../ui/icons/GeneralOption";
-import CashoryReportBarChart from "./cashory-report-bar-chart";
+import LedgerlyReportBarChart from "./ledgerly-report-bar-chart";
 
-interface CashoryReportBalanceChartProps {
+interface LedgerlyReportBalanceChartProps {
   balance: number;
   changeLabel?: string;
   periodLabel?: string;
@@ -15,14 +15,14 @@ interface CashoryReportBalanceChartProps {
   className?: string;
 }
 
-export default function CashoryReportBalanceChart({
+export default function LedgerlyReportBalanceChart({
   balance,
   changeLabel = "+5%",
   periodLabel = "For this month",
   chartData,
   onMenuPress,
   className = "",
-}: CashoryReportBalanceChartProps) {
+}: LedgerlyReportBalanceChartProps) {
   const { isDark } = useAuthTheme();
 
   const iconColor = isDark ? "#FFFFFF" : "#000000";
@@ -51,7 +51,7 @@ export default function CashoryReportBalanceChart({
     <Card
       className={cn(
         "w-full bg-brand-white/60 dark:bg-accent-card/15 rounded-2xl border-0 p-5",
-        className
+        className,
       )}
       style={[{ borderCurve: "continuous" }, shadowStyle]}
     >
@@ -94,7 +94,7 @@ export default function CashoryReportBalanceChart({
         </View>
 
         {/* Bar Chart */}
-        <CashoryReportBarChart
+        <LedgerlyReportBarChart
           data={chartData}
           variant="overview"
           maxBarHeight={140}

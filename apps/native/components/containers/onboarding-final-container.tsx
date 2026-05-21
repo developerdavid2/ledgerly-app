@@ -105,7 +105,7 @@ export default function OnboardingFinalContainer({
                 color: textColor,
               }}
             >
-              Welcome to Cashory!
+              Welcome to Ledgerly!
             </Text>
             <Text
               className="text-body-sm leading-3.75 text-center"

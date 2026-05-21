@@ -9,7 +9,7 @@ import {
 import {
   createBudgetSchema,
   updateBudgetSchema,
-} from "@cashory-demo/schema/budget.schema";
+} from "@ledgerly/schema/budget.schema";
 import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
 

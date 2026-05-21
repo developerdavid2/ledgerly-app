@@ -6,7 +6,7 @@ import { Card } from "heroui-native";
 import { GeneralWallet } from "../ui/icons/GeneralWallet";
 import { GeneralArrowUpRi } from "../ui/icons/GeneralArrowUpRi";
 
-interface CashoryTransactionCardProps {
+interface LedgerlyTransactionCardProps {
   title: string;
   datetime: string;
   amount: string | number;
@@ -16,7 +16,7 @@ interface CashoryTransactionCardProps {
   className?: string;
 }
 
-export default function CashoryTransactionCard({
+export default function LedgerlyTransactionCard({
   title,
   datetime,
   amount,
@@ -24,7 +24,7 @@ export default function CashoryTransactionCard({
   icon,
   onPress,
   className = "",
-}: CashoryTransactionCardProps) {
+}: LedgerlyTransactionCardProps) {
   const { isDark } = useAuthTheme();
   const isIncome = type === "income";
   const fallbackIconColor = isDark ? "#FFFFFF" : "#000000";
@@ -73,7 +73,7 @@ export default function CashoryTransactionCard({
             {typeof amount === "number"
               ? `${isIncome ? "+" : "-"}$${Math.abs(amount).toLocaleString(
                   undefined,
-                  { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                  { minimumFractionDigits: 2, maximumFractionDigits: 2 },
                 )}`
               : amount}
           </Card.Title>

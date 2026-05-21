@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Card, Switch } from "heroui-native";
 
-interface CashoryNotificationItemProps {
+interface LedgerlyNotificationItemProps {
   title: string;
   description: string;
   isSelected: boolean;
@@ -10,13 +10,13 @@ interface CashoryNotificationItemProps {
   className?: string;
 }
 
-export default function CashoryNotificationItem({
+export default function LedgerlyNotificationItem({
   title,
   description,
   isSelected,
   onValueChange,
   className = "",
-}: CashoryNotificationItemProps) {
+}: LedgerlyNotificationItemProps) {
   return (
     <Card
       className={`rounded-[15px] bg-brand-white/50 dark:bg-accent-card/15 py-4.5 px-5 flex-row items-center justify-between border-0 w-full ${className}`}

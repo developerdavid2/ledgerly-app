@@ -3,7 +3,7 @@ import React from "react";
 import { Modal } from "react-native";
 import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 
-interface CashoryConfirmationModalProps {
+interface LedgerlyConfirmationModalProps {
   visible: boolean;
   onCancel: () => void;
   onConfirm: () => void;
@@ -11,13 +11,13 @@ interface CashoryConfirmationModalProps {
   description?: string;
 }
 
-export default function CashoryConfirmationModal({
+export default function LedgerlyConfirmationModal({
   visible,
   onCancel,
   onConfirm,
   title = "Just to make sure your input!",
   description = "Please double check all the income details you have entered. Once submitted, this data will be saved to your tracker.",
-}: CashoryConfirmationModalProps) {
+}: LedgerlyConfirmationModalProps) {
   return (
     <Modal
       visible={visible}

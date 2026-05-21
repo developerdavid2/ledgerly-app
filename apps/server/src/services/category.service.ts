@@ -1,10 +1,10 @@
-import { db } from "@cashory-demo/db";
-import { category } from "@cashory-demo/db/schema/category";
+import { db } from "@ledgerly/db";
+import { category } from "@ledgerly/db/schema/category";
 import { and, asc, eq, isNull, or } from "drizzle-orm";
 
 export async function listCategories(
   userId: string,
-  type?: "income" | "expense"
+  type?: "income" | "expense",
 ) {
   const conditions = [or(eq(category.userId, userId), isNull(category.userId))];
 
@@ -27,7 +27,7 @@ export async function createCategory(
     type: "income" | "expense";
     color?: string;
     sortOrder?: number;
-  }
+  },
 ) {
   const [result] = await db
     .insert(category)
@@ -48,7 +48,7 @@ export async function createCategory(
 export async function updateCategory(
   userId: string,
   id: string,
-  data: { name?: string; emoji?: string; color?: string; sortOrder?: number }
+  data: { name?: string; emoji?: string; color?: string; sortOrder?: number },
 ) {
   const [result] = await db
     .update(category)
@@ -57,8 +57,8 @@ export async function updateCategory(
       and(
         eq(category.id, id),
         eq(category.userId, userId),
-        eq(category.isSystem, false)
-      )
+        eq(category.isSystem, false),
+      ),
     )
     .returning();
 
@@ -72,8 +72,8 @@ export async function deleteCategory(userId: string, id: string) {
       and(
         eq(category.id, id),
         eq(category.userId, userId),
-        eq(category.isSystem, false)
-      )
+        eq(category.isSystem, false),
+      ),
     )
     .returning();
 

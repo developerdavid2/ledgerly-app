@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Button, Card, Chip, cn, Surface, useThemeColor } from "heroui-native";
-import { Category } from "@cashory-demo/schema/category.schema";
+import { Category } from "@ledgerly/schema/category.schema";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function CategoryItem({

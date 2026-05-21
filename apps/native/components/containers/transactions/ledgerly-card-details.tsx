@@ -15,7 +15,7 @@ export interface TransferEntity {
   isCard?: boolean;
 }
 
-export interface CashoryCardDetailsProps {
+export interface LedgerlyCardDetailsProps {
   sender: TransferEntity;
   receiver: TransferEntity;
   status?: CardDetailsStatus;
@@ -23,7 +23,7 @@ export interface CashoryCardDetailsProps {
   className?: string;
 }
 
-export const CashoryCardDetails: React.FC<CashoryCardDetailsProps> = ({
+export const LedgerlyCardDetails: React.FC<LedgerlyCardDetailsProps> = ({
   sender,
   receiver,
   status = "Success",

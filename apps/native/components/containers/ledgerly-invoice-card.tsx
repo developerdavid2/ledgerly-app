@@ -7,7 +7,7 @@ import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 
 export type InvoiceStatus = "Paid" | "Due" | "Overdue" | "Cancel";
 
-interface CashoryInvoiceCardProps {
+interface LedgerlyInvoiceCardProps {
   title: string;
   datetime: string;
   amount: string | number;
@@ -17,7 +17,7 @@ interface CashoryInvoiceCardProps {
   className?: string;
 }
 
-export default function CashoryInvoiceCard({
+export default function LedgerlyInvoiceCard({
   title,
   datetime,
   amount,
@@ -25,7 +25,7 @@ export default function CashoryInvoiceCard({
   icon,
   onPress,
   className = "",
-}: CashoryInvoiceCardProps) {
+}: LedgerlyInvoiceCardProps) {
   const { isDark } = useAuthTheme();
 
   const fallbackIconColor = isDark ? "#FFFFFF" : "#000000";
@@ -113,8 +113,8 @@ export default function CashoryInvoiceCard({
               status === "Paid"
                 ? "success"
                 : status === "Due"
-                ? "warning"
-                : "danger"
+                  ? "warning"
+                  : "danger"
             }
             className="min-w-15 items-center justify-center"
           >

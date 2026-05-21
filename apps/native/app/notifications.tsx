@@ -17,13 +17,13 @@ import {
   useNotifications,
 } from "@/hooks/use-notifications";
 import { Container } from "@/components/container";
-import CashoryScreenHeader from "@/components/base/cashory-screen-header";
+import LedgerlyScreenHeader from "@/components/base/ledgerly-screen-header";
 import { GeneralSearch } from "@/components/ui/icons/GeneralSearch";
 import { GeneralOption } from "@/components/ui/icons/GeneralOption";
 import { GeneralAlarm } from "@/components/ui/icons/GeneralAlarm";
 import { GeneralCheckCirc } from "@/components/ui/icons/GeneralCheckCirc";
 import { GeneralMaintenan } from "@/components/ui/icons/GeneralMaintenan";
-import CashoryNotificationCard from "@/components/base/cashory-notification-card";
+import LedgerlyNotificationCard from "@/components/base/ledgerly-notification-card";
 
 const getNotificationIcon = (type: string) => {
   switch (type) {
@@ -77,7 +77,7 @@ export default function Notifications() {
         showsVerticalScrollIndicator={false}
       >
         {/* Header Navigation */}
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Notification"
           rightElement={
             <>
@@ -113,7 +113,7 @@ export default function Notifications() {
                   key={item.id}
                   onPress={() => handleMarkRead(item.id, item.isRead)}
                 >
-                  <CashoryNotificationCard
+                  <LedgerlyNotificationCard
                     title={item.title}
                     description={item.description}
                     time={format(new Date(item.createdAt), "hh:mm a")}

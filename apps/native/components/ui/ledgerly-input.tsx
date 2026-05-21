@@ -3,7 +3,7 @@ import { Input, Label, TextField, type InputProps } from "heroui-native";
 import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 import { useThemeColors } from "@/hooks/use-theme-colors";
 
-interface CashoryInputProps {
+interface LedgerlyInputProps {
   label?: string;
   value: string;
   onChangeText: (text: string) => void;
@@ -13,7 +13,7 @@ interface CashoryInputProps {
   error?: string;
 }
 
-export default function CashoryInput({
+export default function LedgerlyInput({
   label,
   value,
   onChangeText,
@@ -21,7 +21,7 @@ export default function CashoryInput({
   keyboardType,
   autoCapitalize,
   error,
-}: CashoryInputProps) {
+}: LedgerlyInputProps) {
   const { isDark, iconColor } = useThemeColors();
 
   return (

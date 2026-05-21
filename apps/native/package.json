@@ -13,12 +13,12 @@
   },
   "dependencies": {
     "@better-auth/expo": "1.5.5",
-    "@cashory-demo/env": "*",
-    "@cashory-demo/schema": "*",
     "@expo-google-fonts/plus-jakarta-sans": "^0.4.2",
     "@expo/metro-runtime": "~55.0.6",
     "@expo/vector-icons": "^15.0.3",
     "@gorhom/bottom-sheet": "^5",
+    "@ledgerly/env": "*",
+    "@ledgerly/schema": "*",
     "@react-native-community/datetimepicker": "^9.1.0",
     "@react-native-community/netinfo": "11.5.2",
     "@react-navigation/drawer": "^7.3.9",
@@ -42,6 +42,7 @@
     "expo-router": "~55.0.2",
     "expo-secure-store": "~55.0.8",
     "expo-sharing": "^55.0.16",
+    "expo-splash-screen": "~55.0.21",
     "expo-status-bar": "~55.0.4",
     "expo-web-browser": "~55.0.9",
     "heroui-native": "^1.0.0",
@@ -65,7 +66,7 @@
     "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@cashory-demo/config": "*",
+    "@ledgerly/config": "*",
     "@types/node": "^24.10.0",
     "@types/react": "~19.2.10",
     "typescript": "^5"

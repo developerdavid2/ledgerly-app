@@ -14,7 +14,7 @@ import { GeneralSearch } from "../ui/icons/GeneralSearch";
 import { useThemeColors } from "@/hooks/use-theme-colors";
 import { GeneralSliders } from "../ui/icons/GeneralSliders";
 
-interface CashorySearchBarProps extends TextInputProps {
+interface LedgerlySearchBarProps extends TextInputProps {
   onSearchPress?: () => void;
   onFilterPress?: () => void;
   containerStyle?: StyleProp<ViewStyle>;
@@ -22,7 +22,7 @@ interface CashorySearchBarProps extends TextInputProps {
   showFilter?: boolean;
 }
 
-export default function CashorySearchbar({
+export default function LedgerlySearchbar({
   onSearchPress,
   onFilterPress,
   containerStyle,
@@ -32,7 +32,7 @@ export default function CashorySearchbar({
   value,
   onChangeText,
   ...props
-}: CashorySearchBarProps) {
+}: LedgerlySearchBarProps) {
   const { isDark } = useAuthTheme();
   const { iconColor } = useThemeColors();
 

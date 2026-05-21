@@ -1,7 +1,7 @@
-import { db } from "@cashory-demo/db";
-import { category } from "@cashory-demo/db/schema/category";
-import { transaction } from "@cashory-demo/db/schema/transaction";
-import { wallet } from "@cashory-demo/db/schema/wallet";
+import { db } from "@ledgerly/db";
+import { category } from "@ledgerly/db/schema/category";
+import { transaction } from "@ledgerly/db/schema/transaction";
+import { wallet } from "@ledgerly/db/schema/wallet";
 import { eq, and, desc, sql, count, gte, lte } from "drizzle-orm";
 import { createNotification } from "./notification.service";
 

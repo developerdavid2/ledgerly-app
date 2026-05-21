@@ -5,19 +5,19 @@ import useAuthTheme from "@/hooks/use-auth-theme";
 import { GeneralArrowUpRi } from "../ui/icons/GeneralArrowUpRi";
 import { GeneralArrowUpLe } from "../ui/icons/GeneralArrowUpLe";
 
-interface CashoryIncomeExpenseProps {
+interface LedgerlyIncomeExpenseProps {
   incomeAmount: number;
   expenseAmount: number;
   dateLabel?: string;
   className?: string;
 }
 
-export default function CashoryIncomeExpense({
+export default function LedgerlyIncomeExpense({
   incomeAmount,
   expenseAmount,
   dateLabel = "This month",
   className = "",
-}: CashoryIncomeExpenseProps) {
+}: LedgerlyIncomeExpenseProps) {
   const { isDark } = useAuthTheme();
 
   // Light mode custom shadow from Figma: -1px -5px 61px 0px #8b8a8a1f (rgba(139,138,138,0.12))
@@ -35,7 +35,7 @@ export default function CashoryIncomeExpense({
     <View
       className={cn(
         "flex-row items-center justify-between w-full gap-x-2.5",
-        className
+        className,
       )}
     >
       <Card

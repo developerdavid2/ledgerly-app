@@ -12,7 +12,7 @@ import {
 import {
   createWalletSchema,
   updateWalletSchema,
-} from "@cashory-demo/schema/wallet.schema";
+} from "@ledgerly/schema/wallet.schema";
 
 export const walletRoutes = new Hono()
   .use(authMiddleware)

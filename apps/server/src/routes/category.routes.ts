@@ -9,7 +9,7 @@ import {
   createCategorySchema,
   listCategorySchema,
   updateCategorySchema,
-} from "@cashory-demo/schema/category.schema";
+} from "@ledgerly/schema/category.schema";
 import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
 

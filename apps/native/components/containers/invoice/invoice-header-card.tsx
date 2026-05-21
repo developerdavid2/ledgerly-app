@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { Card } from "heroui-native";
 import { InvoiceStatus } from "@/types/invoice";
-import { getInvoiceStatusStyles } from "@/lib/cashory-invoice-status";
+import { getInvoiceStatusStyles } from "@/lib/ledgerly-invoice-status";
 import { formatCurrency } from "@/lib/format";
 
 interface InvoiceHeaderCardProps {

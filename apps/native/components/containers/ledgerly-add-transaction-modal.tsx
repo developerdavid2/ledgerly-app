@@ -7,24 +7,24 @@ import { withUniwind } from "uniwind";
 import { GeneralArrowUpLe } from "../ui/icons/GeneralArrowUpLe";
 import { GeneralArrowUpRi } from "../ui/icons/GeneralArrowUpRi";
 import { GeneralEdit } from "../ui/icons/GeneralEdit";
-// import { CashoryButton } from "../ui/cashory-button";
-import { CashoryButton } from "../ui/cashory-button";
+// import { LedgerlyButton } from "../ui/ledgerly-button";
+import { LedgerlyButton } from "../ui/ledgerly-button";
 
 const StyledGeneralEdit = withUniwind(GeneralEdit);
 const StyledGeneralArrowUpRi = withUniwind(GeneralArrowUpRi);
 const StyledGeneralArrowUpLe = withUniwind(GeneralArrowUpLe);
 
-export interface CashoryAddTransactionModalProps {
+export interface LedgerlyAddTransactionModalProps {
   visible: boolean;
   onClose: () => void;
   onCreate: (type: "income" | "expense") => void;
 }
 
-export default function CashoryAddTransactionModal({
+export default function LedgerlyAddTransactionModal({
   visible,
   onClose,
   onCreate,
-}: CashoryAddTransactionModalProps) {
+}: LedgerlyAddTransactionModalProps) {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const themeColorForeground = useThemeColor("foreground");
@@ -137,12 +137,12 @@ export default function CashoryAddTransactionModal({
 
           {/* Action Buttons */}
           <View className="gap-y-4 pb-6">
-            <CashoryButton
+            <LedgerlyButton
               onPress={handleCreate}
               className="bg-brand-green-500 dark:bg-dark-charcoal-green"
             >
               Create Now
-            </CashoryButton>
+            </LedgerlyButton>
           </View>
         </BottomSheet.Content>
       </BottomSheet.Portal>

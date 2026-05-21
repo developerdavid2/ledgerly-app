@@ -1,5 +1,5 @@
-import { db } from "@cashory-demo/db";
-import { notification } from "@cashory-demo/db/schema/notification";
+import { db } from "@ledgerly/db";
+import { notification } from "@ledgerly/db/schema/notification";
 import { eq, and, desc, count } from "drizzle-orm";
 
 export async function listNotifications(

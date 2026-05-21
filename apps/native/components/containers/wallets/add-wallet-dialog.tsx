@@ -15,7 +15,7 @@ import {
 } from "heroui-native";
 import { withUniwind } from "uniwind";
 import { GeneralChevronDo2 } from "@/components/ui/icons/GeneralChevronDo2";
-import { CashoryButton } from "../../ui/cashory-button";
+import { LedgerlyButton } from "../../ui/ledgerly-button";
 import { useCreateWallet } from "@/hooks/use-wallet";
 
 const StyledGeneralOption = withUniwind(GeneralChevronDo2);
@@ -36,7 +36,7 @@ export function AddWalletDialog({
 
   const [name, setName] = useState("");
   const [type, setType] = useState<"bank" | "credit" | "cash" | "mobile">(
-    "bank"
+    "bank",
   );
   const [currency, setCurrency] = useState("USD");
   const [isDefault, setIsDefault] = useState(false);
@@ -225,13 +225,13 @@ export function AddWalletDialog({
             className="gap-y-4 pb-6"
             style={{ paddingBottom: insets.bottom + 4 }}
           >
-            <CashoryButton
+            <LedgerlyButton
               onPress={handleCreate}
               isLoading={createWallet.isPending}
               className="bg-brand-green-500 dark:bg-dark-charcoal-green"
             >
               Save Wallet
-            </CashoryButton>
+            </LedgerlyButton>
           </View>
         </BottomSheet.Content>
       </BottomSheet.Portal>

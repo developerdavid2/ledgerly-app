@@ -123,7 +123,7 @@ export function useCompleteOnboarding() {
 
       if (result.error) {
         throw new Error(
-          result.error.message || "Failed to complete onboarding"
+          result.error.message || "Failed to complete onboarding",
         );
       }
 

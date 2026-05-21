@@ -1,11 +1,11 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-import CashoryReportBarChart from "@/components/base/cashory-report-bar-chart";
-import CashorySectionHeader from "@/components/base/cashory-section-header";
+import LedgerlyReportBarChart from "@/components/base/ledgerly-report-bar-chart";
+import LedgerlySectionHeader from "@/components/base/ledgerly-section-header";
 import PeriodBadge from "@/components/base/period-base";
-import CashoryReportSummaryCard from "@/components/base/cashory-report-summary-card";
-import CashoryTransactionCard from "@/components/base/cashory-transaction-card";
+import LedgerlyReportSummaryCard from "@/components/base/ledgerly-report-summary-card";
+import LedgerlyTransactionCard from "@/components/base/ledgerly-transaction-card";
 
 const INCOME_CHART_DATA = [
   { label: "Jan", value: 3600 },
@@ -25,7 +25,7 @@ const INCOME_HISTORY = [
 export default function IncomeActivity() {
   return (
     <View className="flex-col gap-y-5">
-      <CashoryReportSummaryCard
+      <LedgerlyReportSummaryCard
         leftTitle="Total Income"
         leftValue={54000.9}
         rightTitle="Monthly Income"
@@ -45,7 +45,7 @@ export default function IncomeActivity() {
           <PeriodBadge label="For Six Month" />
         </View>
 
-        <CashoryReportBarChart
+        <LedgerlyReportBarChart
           data={INCOME_CHART_DATA}
           variant="income"
           maxBarHeight={160}
@@ -54,14 +54,14 @@ export default function IncomeActivity() {
 
       {/* Detail list example */}
       <View className="flex-col gap-y-2.5 w-full">
-        <CashorySectionHeader
+        <LedgerlySectionHeader
           title="Detail transaction"
           rightTitle="Sort by"
           rightTitleClassName="text-brand-black dark:text-brand-white text-[12px] font-medium"
           onRightPress={() => {}}
         />
         {INCOME_HISTORY.map((item, index) => (
-          <CashoryTransactionCard
+          <LedgerlyTransactionCard
             key={`income-${index}`}
             title={item.title}
             datetime={item.datetime}

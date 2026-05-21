@@ -1,5 +1,5 @@
-import { auth } from "@cashory-demo/auth";
-import { env } from "@cashory-demo/env/server";
+import { auth } from "@ledgerly/auth";
+import { env } from "@ledgerly/env/server";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
@@ -10,12 +10,20 @@ import { budgetRoutes } from "./routes/budget.routes";
 import { notificationRoutes } from "./routes/notification.routes";
 import { invoiceRoutes } from "./routes/invoice.route";
 
+// Allowed origins for development and production
+const allowedOrigins = [
+  "http://localhost:3000", // Local web dev
+  "http://10.0.2.2:3000", // Android emulator
+  "https://10.0.2.2:3000", // Android emulator (HTTPS)
+  env.CORS_ORIGIN, // Environment-based origin (ngrok/production)
+];
+
 const app = new Hono()
   .use(logger())
   .use(
     "/*",
     cors({
-      origin: env.CORS_ORIGIN,
+      origin: allowedOrigins,
       allowMethods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
       allowHeaders: ["Content-Type", "Authorization", "Cookie"],
       credentials: true,
@@ -28,6 +36,10 @@ const app = new Hono()
   .route("/api/transaction", transactionRoutes)
   .route("/api/notification", notificationRoutes)
   .route("/api/invoice", invoiceRoutes);
+
+app.get("/api/health", (c) => {
+  return c.json({ message: "Route is up and running" }, 200);
+});
 
 app.onError((err, c) => {
   console.error("[Server Error]", err);

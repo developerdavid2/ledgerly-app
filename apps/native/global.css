@@ -12,8 +12,8 @@
 @source '../../node_modules/heroui-native/lib';
 
 /* =============================================================================
-   CASHORY DESIGN SYSTEM — HeroUI Native Theme
-   Colors derived from official Cashory design guidelines.
+   LEDGERLY DESIGN SYSTEM — HeroUI Native Theme
+   Colors derived from official Ledgerly design guidelines.
    Reference: https://v3.heroui.com/docs/native/getting-started/theming
    ============================================================================= */
 
@@ -27,7 +27,7 @@
   --snow: oklch(0.9911 0 0);
   --eclipse: oklch(0.2103 0.0059 285.89);
 
-  /* ── Cashory Brand Primitives ────────────────────────────────────────────── */
+  /* ── Ledgerly Brand Primitives ────────────────────────────────────────────── */
 
   /* Primary Green Palette — #1E4C76 base (Radiant/Moderate Green) */
   /* Note: the design uses teal-greens mapped to #1E4C76 key; actual swatches
@@ -96,7 +96,7 @@
   --font-semibold: "PlusJakartaSans_600SemiBold";
   --font-bold: "PlusJakartaSans_700Bold";
 
-  /* ── Typography Scale — Cashory Design Guidelines ────────────────────────
+  /* ── Typography Scale — Ledgerly Design Guidelines ────────────────────────
      Naming: --text-{token}           → font size (rem)
              --text-{token}--leading  → line-height (Tailwind v4 convention)
      All sizes are Bold weight per design spec.
@@ -193,12 +193,15 @@
     --link: oklch(0.309 0.077 170.8); /* Green 500 */
 
     /* ── Shadows ──────────────────────────────────────────────────────────── */
-    --surface-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04),
-      0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.06);
-    --overlay-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06),
-      0 -6px 12px 0 rgba(0, 0, 0, 0.02), 0 14px 28px 0 rgba(0, 0, 0, 0.08);
-    --field-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04),
-      0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 0 1px 0 rgba(0, 0, 0, 0.06);
+    --surface-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.06),
+      0 0 1px 0 rgba(0, 0, 0, 0.06);
+    --overlay-shadow:
+      0 2px 8px 0 rgba(0, 0, 0, 0.06), 0 -6px 12px 0 rgba(0, 0, 0, 0.02),
+      0 14px 28px 0 rgba(0, 0, 0, 0.08);
+    --field-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.06),
+      0 0 1px 0 rgba(0, 0, 0, 0.06);
   }
 
   @variant dark {
@@ -322,7 +325,7 @@
   --color-brand-flashwhite: var(--brand-flashwhite);
   --color-brand-white: var(--brand-white);
 
-  /* ── Extra Custom Cashory Primitives ─────────────────────────────────────── */
+  /* ── Extra Custom Ledgerly Primitives ─────────────────────────────────────── */
   --color-dark-green: var(--dark-green);
   --color-dark-charcoal-green: var(--dark-charcoal-green);
   --color-accent-card: var(--accent-card);

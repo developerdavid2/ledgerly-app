@@ -1,8 +1,8 @@
-import CashorySectionHeader from "@/components/base/cashory-section-header";
+import LedgerlySectionHeader from "@/components/base/ledgerly-section-header";
 import React from "react";
 import { Text, View } from "react-native";
-import CashoryIncomeExpense from "../cashory-income-expense";
-import CashoryReportBalanceChart from "@/components/base/cashory-report-balance-chart";
+import LedgerlyIncomeExpense from "../ledgerly-income-expense";
+import LedgerlyReportBalanceChart from "@/components/base/ledgerly-report-balance-chart";
 
 const OVERVIEW_CHART_DATA = [
   { label: "Jan", value: 5200 },
@@ -17,7 +17,7 @@ const OVERVIEW_CHART_DATA = [
 export default function DashboardOverview() {
   return (
     <View className="flex-col gap-y-5">
-      <CashorySectionHeader
+      <LedgerlySectionHeader
         title="Dashboard"
         rightTitle="See all"
         rightTitleClassName="text-brand-black dark:text-brand-white text-[12px] font-medium"
@@ -34,14 +34,14 @@ export default function DashboardOverview() {
       </View>
 
       {/* Income / Expense Summary */}
-      <CashoryIncomeExpense
+      <LedgerlyIncomeExpense
         incomeAmount={15000}
         expenseAmount={6000}
         dateLabel="This month"
       />
 
       {/* Balance Chart Card */}
-      <CashoryReportBalanceChart
+      <LedgerlyReportBalanceChart
         balance={21000}
         changeLabel="+5%"
         periodLabel="For this month"

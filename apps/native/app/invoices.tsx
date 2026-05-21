@@ -10,15 +10,15 @@ import {
   useThemeColor,
 } from "heroui-native";
 import { Ionicons } from "@expo/vector-icons";
-import CashoryScreenHeader from "@/components/base/cashory-screen-header";
-import CashorySearchbar from "@/components/base/cashory-searchbar";
+import LedgerlyScreenHeader from "@/components/base/ledgerly-screen-header";
+import LedgerlySearchbar from "@/components/base/ledgerly-searchbar";
 import { useInvoices, useDeleteInvoice } from "@/hooks/use-invoice";
 import { DashboardInvoiceItem, InvoiceStatus } from "@/types/invoice";
 import { format } from "date-fns";
-import CashorySectionHeader from "@/components/base/cashory-section-header";
+import LedgerlySectionHeader from "@/components/base/ledgerly-section-header";
 import { router } from "expo-router";
-import CashoryInvoiceListingCard from "@/components/containers/cashory-invoice-listing-card";
-import { CashoryButton } from "@/components/ui/cashory-button";
+import LedgerlyInvoiceListingCard from "@/components/containers/ledgerly-invoice-listing-card";
+import { LedgerlyButton } from "@/components/ui/ledgerly-button";
 
 const mapServerStatusToType = (status: string): InvoiceStatus => {
   switch (status.toLowerCase()) {
@@ -109,7 +109,7 @@ export default function Invoices() {
   return (
     <SafeArea style={{ backgroundColor: themeColorBackground }}>
       <View className="px-4 w-full">
-        <CashoryScreenHeader
+        <LedgerlyScreenHeader
           title="Invoice"
           rightElement={
             <Button
@@ -129,7 +129,7 @@ export default function Invoices() {
         contentContainerStyle={{ paddingTop: 10, paddingBottom: 40 }}
         showsVerticalScrollIndicator={false}
       >
-        <CashorySearchbar
+        <LedgerlySearchbar
           onSearchPress={() => {}}
           onFilterPress={() => setIsFilterModalVisible(true)}
         />
@@ -167,13 +167,13 @@ export default function Invoices() {
 
             return (
               <View key={monthYear} className="flex-col w-full mb-8">
-                <CashorySectionHeader
+                <LedgerlySectionHeader
                   title={title}
                   rightTitle={`${items.length} Service`}
                   rightTitleClassName="text-brand-white"
                 />
 
-                <CashoryInvoiceListingCard
+                <LedgerlyInvoiceListingCard
                   invoices={items}
                   onLoadMore={() => console.log(`Load more ${monthYear}`)}
                   onPressItem={(item) => router.push(`/invoice/${item.id}`)}
@@ -249,7 +249,7 @@ export default function Invoices() {
               >
                 Cancel
               </Button>
-              <CashoryButton
+              <LedgerlyButton
                 variant="solid"
                 color="danger"
                 size="sm"
@@ -257,7 +257,7 @@ export default function Invoices() {
                 isLoading={deleteInvoice.isPending}
               >
                 Delete
-              </CashoryButton>
+              </LedgerlyButton>
             </View>
           </Dialog.Content>
         </Dialog.Portal>

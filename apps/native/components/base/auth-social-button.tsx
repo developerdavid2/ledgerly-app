@@ -1,9 +1,6 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { Button } from "heroui-native";
-import { Icon } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 import useAuthTheme from "@/hooks/use-auth-theme";
+import React from "react";
+import { View } from "react-native";
 import SocialIconButton from "../ui/social-icon-button";
 
 export default function AuthSocialButtons({

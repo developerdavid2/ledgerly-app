@@ -1,10 +1,10 @@
 import { Platform } from "react-native";
 import { useState } from "react";
-// import CashoryAddTransactionModal from "@/components/containers/cashory-add-transaction-modal";
+// import LedgerlyAddTransactionModal from "@/components/containers/ledgerly-add-transaction-modal";
 
 import AndroidTabs from "@/components/navigation/_android-tabs";
 import IOSTabs from "@/components/navigation/_ios-tabs";
-import CashoryAddTransactionModal from "@/components/containers/cashory-add-transaction-modal";
+import LedgerlyAddTransactionModal from "@/components/containers/ledgerly-add-transaction-modal";
 
 const TabLayout = () => {
   const [isAddTransactionVisible, setAddTransactionVisible] = useState(false);
@@ -23,7 +23,7 @@ const TabLayout = () => {
       )}
 
       {/* Modal is platform-agnostic, lives here once */}
-      <CashoryAddTransactionModal
+      <LedgerlyAddTransactionModal
         visible={isAddTransactionVisible}
         onClose={() => setAddTransactionVisible(false)}
         onCreate={() => setAddTransactionVisible(false)}

@@ -1,7 +1,7 @@
 import { expo } from "@better-auth/expo";
-import { db } from "@cashory-demo/db";
-import * as schema from "@cashory-demo/db/schema/auth";
-import { env } from "@cashory-demo/env/server";
+import { db } from "@ledgerly/db";
+import * as schema from "@ledgerly/db/schema/auth";
+import { env } from "@ledgerly/env/server";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
@@ -15,9 +15,9 @@ export const auth = betterAuth({
   }),
   trustedOrigins: [
     env.CORS_ORIGIN,
-    "cashory://",
-    "cashory-demo://",
-    "cashory.exp.direct://",
+    "ledgerly://",
+    "ledgerly://",
+    "ledgerly.exp.direct://",
     "mybettertapp://",
     ...devOrigins,
   ],

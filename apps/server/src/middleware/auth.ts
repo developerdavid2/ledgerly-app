@@ -1,4 +1,4 @@
-import { auth } from "@cashory-demo/auth";
+import { auth } from "@ledgerly/auth";
 import { createMiddleware } from "hono/factory";
 type AuthEnv = {
   Variables: {

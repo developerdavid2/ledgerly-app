@@ -5,7 +5,7 @@ import FilterModal from "./filter-modal";
 import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 import FilterPill from "@/components/base/filter-pill";
 
-export interface CashoryTransactionFilterModalProps {
+export interface LedgerlyTransactionFilterModalProps {
   visible: boolean;
   onClose: () => void;
   onApplyFilter: (filters: TransactionFilters) => void;
@@ -41,7 +41,7 @@ export default function TransactionFilterModal({
   visible,
   onClose,
   onApplyFilter,
-}: CashoryTransactionFilterModalProps) {
+}: LedgerlyTransactionFilterModalProps) {
   const { isDark } = useAuthTheme();
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedDate, setSelectedDate] = useState("All");

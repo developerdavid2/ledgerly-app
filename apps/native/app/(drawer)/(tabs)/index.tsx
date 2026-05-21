@@ -1,8 +1,8 @@
 import { Container } from "@/components/container";
-import CashoryBudgetPlanCard from "@/components/containers/cashory-budget-plan";
-import CashoryCardBalance from "@/components/containers/cashory-card-balance";
-import CashoryIncomeExpense from "@/components/containers/cashory-income-expense";
-import CashoryInvoiceCard from "@/components/containers/cashory-invoice-card";
+import LedgerlyBudgetPlanCard from "@/components/containers/ledgerly-budget-plan";
+import LedgerlyCardBalance from "@/components/containers/ledgerly-card-balance";
+import LedgerlyIncomeExpense from "@/components/containers/ledgerly-income-expense";
+import LedgerlyInvoiceCard from "@/components/containers/ledgerly-invoice-card";
 import SafeArea from "@/components/safe-area";
 import { GeneralAlarm } from "@/components/ui/icons/GeneralAlarm";
 import { GeneralSearch } from "@/components/ui/icons/GeneralSearch";
@@ -163,7 +163,7 @@ export default function HomeScreen() {
             </View>
           </View>
           <View className="flex-col w-full gap-y-2.5 mb-7">
-            <CashoryCardBalance
+            <LedgerlyCardBalance
               totalBalance={totalBalance}
               earned={monthlyIncome}
               spent={monthlyExpense}
@@ -184,12 +184,12 @@ export default function HomeScreen() {
           </View>
 
           <View className="flex-col w-full gap-y-2.5 mb-7">
-            <CashoryIncomeExpense
+            <LedgerlyIncomeExpense
               incomeAmount={monthlyIncome}
               expenseAmount={monthlyExpense}
               dateLabel="This month"
             />
-            <CashoryBudgetPlanCard
+            <LedgerlyBudgetPlanCard
               month={budgetMonth}
               onMonthChange={setBudgetMonth}
               availableCash={budgetAvailable}
@@ -232,7 +232,7 @@ export default function HomeScreen() {
               </View>
             ) : (
               recentInvoices.map((inv: any) => (
-                <CashoryInvoiceCard
+                <LedgerlyInvoiceCard
                   key={inv.id}
                   title={inv.clientName || inv.invoiceNumber}
                   datetime={format(new Date(inv.createdAt), "yyyy-MM-dd HH:mm")}

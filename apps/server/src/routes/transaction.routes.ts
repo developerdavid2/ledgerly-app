@@ -12,7 +12,7 @@ import {
   listTransactionsSchema,
   transactionSummarySchema,
   updateTransactionSchema,
-} from "@cashory-demo/schema/transaction.schema";
+} from "@ledgerly/schema/transaction.schema";
 import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
 
